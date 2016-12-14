@@ -38,6 +38,14 @@ environment:
       CONDA_PY: 35
       CONDA_INSTALL_LOCN: C:\\Miniconda35-x64
 
+    - TARGET_ARCH: x86
+      CONDA_PY: 36
+      CONDA_INSTALL_LOCN: C:\\Miniconda
+
+    - TARGET_ARCH: x64
+      CONDA_PY: 36
+      CONDA_INSTALL_LOCN: C:\\Miniconda-x64
+
 
 # We always use a 64-bit machine, but can build x86 distributions
 # with the TARGET_ARCH variable.
@@ -63,6 +71,7 @@ install:
     - cmd: set "PATH=%CONDA_INSTALL_LOCN%\\Scripts;%CONDA_INSTALL_LOCN%\\Library\\bin;%PATH%"
     - cmd: conda config --set show_channel_urls true
     - cmd: conda config --add channels conda-forge
+    - cmd: conda config --add channels conda-forge/label/prerelease
 
     # Add a hack to switch to `conda` version `4.1.12` before activating.
     # This is required to handle a long path activation issue.
