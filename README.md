@@ -11,6 +11,18 @@ Summary: Python package for providing Mozilla's CA Bundle.
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/certifi-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/certifi-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/certifi-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/certifi-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/certifi-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/certifi-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/certifi/badges/version.svg)](https://anaconda.org/conda-forge/certifi)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/certifi/badges/downloads.svg)](https://anaconda.org/conda-forge/certifi)
+
 Installing certifi
 ==================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `certifi` available on your platfo
 ```
 conda search certifi --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/certifi-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/certifi-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/certifi-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/certifi-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/certifi-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/certifi-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/certifi/badges/version.svg)](https://anaconda.org/conda-forge/certifi)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/certifi/badges/downloads.svg)](https://anaconda.org/conda-forge/certifi)
 
 
 Updating certifi-feedstock
