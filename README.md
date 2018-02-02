@@ -14,9 +14,7 @@ Summary: Python package for providing Mozilla's CA Bundle.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/certifi-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/certifi-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/certifi-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/certifi-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/certifi-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/certifi-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/certifi-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/certifi-feedstock)
 
 Current release info
 ====================
