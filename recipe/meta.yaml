@@ -9,7 +9,8 @@ source:
   sha256: 5ec74291ca1136b40f0379e1128ff80e866597e4e2c1e755739a913bbc3613c0
 
 build:
-  number: 0
+  number: 1
+  noarch: python
   preserve_egg_dir: True
   script: python setup.py install
 
