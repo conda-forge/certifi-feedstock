@@ -14,14 +14,15 @@ Summary: Python package for providing Mozilla's CA Bundle.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/certifi-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/certifi-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/certifi-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/certifi-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/certifi-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/certifi-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/certifi-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/certifi-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/certifi/badges/version.svg)](https://anaconda.org/conda-forge/certifi)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/certifi/badges/downloads.svg)](https://anaconda.org/conda-forge/certifi)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-certifi-green.svg)](https://anaconda.org/conda-forge/certifi) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/certifi.svg)](https://anaconda.org/conda-forge/certifi) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/certifi.svg)](https://anaconda.org/conda-forge/certifi) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/certifi.svg)](https://anaconda.org/conda-forge/certifi) |
 
 Installing certifi
 ==================
