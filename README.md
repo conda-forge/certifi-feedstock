@@ -9,6 +9,9 @@ Feedstock license: BSD 3-Clause
 
 Summary: Python package for providing Mozilla's CA Bundle.
 
+Certifi is a curated collection of Root Certificates for validating the
+trustworthiness of SSL certificates while verifying the identity of TLS
+hosts.
 
 
 Current build status
