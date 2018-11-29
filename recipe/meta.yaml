@@ -1,4 +1,4 @@
-{% set version = "2018.10.15" %}
+{% set version = "2018.11.29" %}
 
 package:
   name: certifi
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/certifi/certifi-{{ version }}.tar.gz
-  sha256: 6d58c986d22b038c8c0df30d639f23a3e6d172a05c3583e766f4c0b785c0986a
+  sha256: 47f9c83ef4c0c621eaef743f133f09fa8a74a9b75f037e8624f83bd1b6626cb7
 
 build:
   number: 1000
