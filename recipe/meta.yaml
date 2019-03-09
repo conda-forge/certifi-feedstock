@@ -1,4 +1,4 @@
-{% set version = "2018.11.29" %}
+{% set version = "2019.3.9" %}
 
 package:
   name: certifi
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/certifi/certifi-{{ version }}.tar.gz
-  sha256: 47f9c83ef4c0c621eaef743f133f09fa8a74a9b75f037e8624f83bd1b6626cb7
+  sha256: b26104d6835d1f5e49452a26eb2ff87fe7090b89dfcaee5ea2212697e1e1d7ae
 
 build:
-  number: 1000
+  number: 0
   preserve_egg_dir: True
   script: python setup.py install
 
