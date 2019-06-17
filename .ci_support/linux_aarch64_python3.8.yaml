@@ -1,7 +1,5 @@
 BUILD:
 - aarch64-conda_cos7-linux-gnu
-build_number_decrement:
-- '0'
 cdt_arch:
 - aarch64
 cdt_name:
@@ -14,7 +12,7 @@ docker_image:
 - condaforge/linux-anvil-aarch64
 pin_run_as_build:
   python:
-    min_pin: x.x.x.x
+    min_pin: x.x
     max_pin: x.x
 python:
 - '3.8'
