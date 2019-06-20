@@ -1,3 +1,5 @@
+build_number_decrement:
+- '0'
 channel_sources:
 - conda-forge,defaults,conda-forge/label/pre-3.8
 channel_targets:
@@ -6,7 +8,7 @@ docker_image:
 - condaforge/linux-anvil-comp7
 pin_run_as_build:
   python:
-    min_pin: x.x
+    min_pin: x.x.x.x
     max_pin: x.x
 python:
 - '3.8'
