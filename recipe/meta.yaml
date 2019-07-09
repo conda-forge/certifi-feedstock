@@ -36,7 +36,7 @@ test:
 about:
   home: http://certifi.io/
   license: ISC
-  license_file: LICENSE
+  license_file: certifi/LICENSE
   summary: Python package for providing Mozilla's CA Bundle.
   description: |
    Certifi is a curated collection of Root Certificates for validating the
