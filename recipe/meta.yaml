@@ -1,4 +1,4 @@
-{% set version = "2019.6.16" %}
+{% set version = "2019.9.11" %}
 
 {% set pip_version = "19.1.1" %}
 {% set setuptools_version = "41.0.1" %}
@@ -9,7 +9,7 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/c/certifi/certifi-{{ version }}.tar.gz
-    sha256: 945e3ba63a0b9f577b1395204e13c3a231f9bc0223888be653286534e5873695
+    sha256: e4f3620cfea4f83eedc95b24abd9cd56f3c4b146dd0177e83a21b4eb49e21e50
     folder: certifi
   # bootstrap pip and setuptools to avoid circular dependency
   # but without losing metadata
@@ -21,7 +21,7 @@ source:
     folder: setuptools_wheel
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   host:
