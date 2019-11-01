@@ -21,7 +21,7 @@ source:
     folder: setuptools_wheel
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   host:
