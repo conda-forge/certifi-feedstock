@@ -21,6 +21,7 @@ source:
     folder: setuptools_wheel
 
 build:
+  noarch: python
   number: 0
 
 requirements:
