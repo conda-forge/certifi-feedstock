@@ -10,7 +10,7 @@ __migrator:
     1 
 
 python:
-  - 2.7
+  - 2.7            # [not (aarch64 or ppc64le)]
   - 3.6
   - 3.7
   - 3.8
