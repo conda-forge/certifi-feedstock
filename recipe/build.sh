@@ -1,5 +1,7 @@
 if [[ "$build_platform" != "$target_platform" ]]; then
-  export _PYTHON_PROJECT_BASE=$PREFIX
+  export _PYTHON_PROJECT_BASE=$PREFIX/bin
+  export PYTHONHOME=$PREFIX
+  export PYTHONPATH=$BUILD_PREFIX/lib/python$PY_VER
   if [[ "$target_platform" == "osx-arm64" ]]; then
     export _PYTHON_HOST_PLATFORM="darwin-arm64"
     export _PYTHON_SYSCONFIGDATA_NAME=$PREFIX/lib/python$PY_VER/_sysconfigdata__darwin_darwin.py
