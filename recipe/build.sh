@@ -4,6 +4,7 @@ if [[ "$build_platform" != "$target_platform" ]]; then
     export _PYTHON_HOST_PLATFORM="darwin-arm64"
     export _PYTHON_SYSCONFIGDATA_NAME=$PREFIX/lib/python$PY_VER/_sysconfigdata__darwin_darwin.py
   fi
+  cp $BUILD_PREFIX/bin/python $PREFIX/bin/python
 fi
 
 # use bootstrapped pip to install certifi without depending on installed pip
