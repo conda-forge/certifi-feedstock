@@ -26,7 +26,6 @@ build:
 requirements:
   build:
     - python           # [build_platform != target_platform]
-    - cross-python     # [build_platform != target_platform]
   host:
     - python
   run:
