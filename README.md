@@ -5,9 +5,13 @@ Home: http://certifi.io/
 
 Package license: ISC
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/certifi-feedstock/blob/master/LICENSE.txt)
 
 Summary: Python package for providing Mozilla's CA Bundle.
+
+Development: https://github.com/certifi/python-certifi
+
+Documentation: https://pypi.python.org/pypi/certifi
 
 Certifi is a curated collection of Root Certificates for validating the
 trustworthiness of SSL certificates while verifying the identity of TLS
