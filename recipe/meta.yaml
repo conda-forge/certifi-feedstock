@@ -21,16 +21,14 @@ source:
     folder: setuptools_wheel
 
 build:
-  number: 0
+  number: 1
+  noarch: python
 
 requirements:
-  build:
-    - python                                # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}    # [build_platform != target_platform]
   host:
-    - python
+    - python >=3.7
   run:
-    - python
+    - python >=3.7
 
 test:
   imports:
@@ -55,4 +53,3 @@ extra:
     - pelson
     - sigmavirus24
     - ocefpaf
-    - mingwandroid
