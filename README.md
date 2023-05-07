@@ -1,11 +1,11 @@
-About certifi
-=============
+About certifi-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/certifi-feedstock/blob/main/LICENSE.txt)
 
 Home: http://certifi.io/
 
 Package license: ISC
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/certifi-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python package for providing Mozilla's CA Bundle.
 
