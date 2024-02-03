@@ -28,7 +28,7 @@ source:
   {%- endfor %}
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script_env:
     # Add bootstrapped wheels to `PYTHONPATH` so Python can find them for the build
