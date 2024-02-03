@@ -3,6 +3,11 @@
 {% set pip_version = "23.3.1" %}
 {% set setuptools_version = "68.2.2" %}
 
+# For conda* parsing passes, have `SRC_DIR` fallback to `"."`
+{% if SRC_DIR is undefined %}
+{% set SRC_DIR = "." %}
+{% endif %}
+
 package:
   name: certifi
   version: {{ version }}
@@ -23,6 +28,17 @@ source:
 build:
   number: 0
   noarch: python
+  script_env:
+    # use bootstrapped pip to install certifi without depending on installed pip
+    - >-
+      PYTHONPATH=
+      {%- for e in ["pip_wheel", "setuptools_wheel"] -%}
+      {{ os.sep.join([SRC_DIR, e]) ~ os.pathsep }}
+      {%- endfor -%}
+      {{ os.environ.get("PYTHONPATH", "") }}
+  script:
+    - cd certifi
+    - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
