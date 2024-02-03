@@ -157,6 +157,3 @@ Feedstock Maintainers
 * [@pelson](https://github.com/pelson/)
 * [@sigmavirus24](https://github.com/sigmavirus24/)
 
-
-<!-- dummy commit to enable rerendering -->
-
