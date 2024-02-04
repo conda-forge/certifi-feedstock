@@ -1,4 +1,4 @@
-{% set version = "2023.11.17" %}
+{% set version = "2024.2.2" %}
 
 {% set pip_version = "23.3.2" %}
 {% set setuptools_version = "69.0.3" %}
@@ -10,7 +10,7 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/c/certifi/certifi-{{ version }}.tar.gz
-    sha256: 9b469f3a900bf28dc19b8cfbf8019bf47f7fdd1a65a1d4ffb98fc14166beb4d1
+    sha256: 0569859f95fc761b18b45ef421b1290a0f65f147e92a1e5eb3e635f9a5e4e66f
     folder: certifi
   # Download bootstrapped wheels into their respective source directories
   - url: https://pypi.io/packages/py3/p/pip/pip-{{ pip_version }}-py3-none-any.whl
@@ -24,14 +24,12 @@ source:
     folder: boostrap_wheels
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script_env:
     # Add bootstrapped wheels to `PYTHONPATH` so Python can find them for the build
     - >-
-      PYTHONPATH=
-      {{- os.sep.join([SRC_DIR|default("."), "boostrap_wheels"]) ~ os.pathsep }}
-      {{- os.environ.get("PYTHONPATH", "") }}
+      PYTHONPATH= {{- os.sep.join([SRC_DIR|default("."), "boostrap_wheels"]) ~ os.pathsep }} {{- os.environ.get("PYTHONPATH", "") }}
   script:
     - cd certifi
     - {{ PYTHON }} -m pip install . -vv
