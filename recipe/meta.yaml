@@ -36,11 +36,13 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
   run:
-    - python >=3.7
+    - python >={{ python_min }}
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - certifi
 
