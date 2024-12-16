@@ -1,26 +1,26 @@
-{% set version = "2024.8.30" %}
+{% set version = "2024.12.14" %}
 
-{% set pip_version = "23.3.2" %}
-{% set setuptools_version = "69.0.3" %}
-{% set wheel_version = "0.42.0" %}
+{% set pip_version = "24.3.1" %}
+{% set setuptools_version = "75.6.0" %}
+{% set wheel_version = "0.45.1" %}
 
 package:
   name: certifi
   version: {{ version }}
 
 source:
-  - url: https://pypi.io/packages/source/c/certifi/certifi-{{ version }}.tar.gz
-    sha256: bec941d2aa8195e248a60b31ff9f0558284cf01a52591ceda73ea9afffd69fd9
+  - url: https://pypi.org/packages/source/c/certifi/certifi-{{ version }}.tar.gz
+    sha256: b650d30f370c2b724812bee08008be0c4163b163ddaec3f2546c1caf65f191db
     folder: certifi
   # Download bootstrapped wheels into their respective source directories
-  - url: https://pypi.io/packages/py3/p/pip/pip-{{ pip_version }}-py3-none-any.whl
-    sha256: 5052d7889c1f9d05224cd41741acb7c5d6fa735ab34e339624a614eaaa7e7d76
+  - url: https://pypi.org/packages/py3/p/pip/pip-{{ pip_version }}-py3-none-any.whl
+    sha256: 3790624780082365f47549d032f3770eeb2b1e8bd1f7b2e02dace1afa361b4ed
     folder: boostrap_wheels
-  - url: https://pypi.io/packages/py3/s/setuptools/setuptools-{{ setuptools_version }}-py3-none-any.whl
-    sha256: 385eb4edd9c9d5c17540511303e39a147ce2fc04bc55289c322b9e5904fe2c05
+  - url: https://pypi.org/packages/py3/s/setuptools/setuptools-{{ setuptools_version }}-py3-none-any.whl
+    sha256: ce74b49e8f7110f9bf04883b730f4765b774ef3ef28f722cce7c273d253aaf7d
     folder: boostrap_wheels
-  - url: https://pypi.io/packages/py3/w/wheel/wheel-{{ wheel_version }}-py3-none-any.whl
-    sha256: 177f9c9b0d45c47873b619f5b650346d632cdc35fb5e4d25058e09c9e581433d
+  - url: https://pypi.org/packages/py3/w/wheel/wheel-{{ wheel_version }}-py3-none-any.whl
+    sha256: 708e7481cc80179af0e556bbf0cc00b8444c7321e2700b8d8580231d13017248
     folder: boostrap_wheels
 
 build:
@@ -36,11 +36,13 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
   run:
-    - python >=3.7
+    - python >={{ python_min }}
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - certifi
 
