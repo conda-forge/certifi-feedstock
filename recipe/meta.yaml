@@ -29,7 +29,7 @@ build:
   script_env:
     # Add bootstrapped wheels to `PYTHONPATH` so Python can find them for the build
     - >-
-      PYTHONPATH= {{- os.sep.join([SRC_DIR|default("."), "boostrap_wheels"]) ~ os.pathsep }} {{- os.environ.get("PYTHONPATH", "") }}
+      PYTHONPATH=  {{- os.sep.join([SRC_DIR|default("."), "boostrap_wheels"]) ~ os.pathsep }}  {{- os.environ.get("PYTHONPATH", "") }}
   script:
     - cd certifi
     - {{ PYTHON }} -m pip install . -vv
