@@ -1,7 +1,7 @@
 {% set version = "2025.1.31" %}
 
-{% set pip_version = "24.3.1" %}
-{% set setuptools_version = "75.6.0" %}
+{% set pip_version = "25.0.1" %}
+{% set setuptools_version = "75.8.0" %}
 {% set wheel_version = "0.45.1" %}
 
 package:
@@ -14,10 +14,10 @@ source:
     folder: certifi
   # Download bootstrapped wheels into their respective source directories
   - url: https://pypi.org/packages/py3/p/pip/pip-{{ pip_version }}-py3-none-any.whl
-    sha256: 3790624780082365f47549d032f3770eeb2b1e8bd1f7b2e02dace1afa361b4ed
+    sha256: c46efd13b6aa8279f33f2864459c8ce587ea6a1a59ee20de055868d8f7688f7f
     folder: boostrap_wheels
   - url: https://pypi.org/packages/py3/s/setuptools/setuptools-{{ setuptools_version }}-py3-none-any.whl
-    sha256: ce74b49e8f7110f9bf04883b730f4765b774ef3ef28f722cce7c273d253aaf7d
+    sha256: e3982f444617239225d675215d51f6ba05f845d4eec313da4418fdbb56fb27e3
     folder: boostrap_wheels
   - url: https://pypi.org/packages/py3/w/wheel/wheel-{{ wheel_version }}-py3-none-any.whl
     sha256: 708e7481cc80179af0e556bbf0cc00b8444c7321e2700b8d8580231d13017248
