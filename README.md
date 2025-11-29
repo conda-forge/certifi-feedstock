@@ -17,7 +17,6 @@ Certifi is a curated collection of Root Certificates for validating the
 trustworthiness of SSL certificates while verifying the identity of TLS
 hosts.
 
-
 Current build status
 ====================
 
