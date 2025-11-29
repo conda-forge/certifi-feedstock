@@ -1,0 +1,66 @@
+schema_version: 1
+
+context:
+  version: "2025.11.12"
+  pip_version: "25.0.1"
+  setuptools_version: "75.8.0"
+  wheel_version: "0.45.1"
+  python_min: "3.9"
+
+package:
+  name: certifi
+  version: ${{ version }}
+
+source:
+  - url: https://pypi.org/packages/source/c/certifi/certifi-${{ version }}.tar.gz
+    sha256: d8ab5478f2ecd78af242878415affce761ca6bc54a22a27e026d7c25357c3316
+    target_directory: certifi
+  - url: https://pypi.org/packages/py3/p/pip/pip-${{ pip_version }}-py3-none-any.whl
+    sha256: c46efd13b6aa8279f33f2864459c8ce587ea6a1a59ee20de055868d8f7688f7f
+    target_directory: boostrap_wheels
+  - url: https://pypi.org/packages/py3/s/setuptools/setuptools-${{ setuptools_version }}-py3-none-any.whl
+    sha256: e3982f444617239225d675215d51f6ba05f845d4eec313da4418fdbb56fb27e3
+    target_directory: boostrap_wheels
+  - url: https://pypi.org/packages/py3/w/wheel/wheel-${{ wheel_version }}-py3-none-any.whl
+    sha256: 708e7481cc80179af0e556bbf0cc00b8444c7321e2700b8d8580231d13017248
+    target_directory: boostrap_wheels
+
+build:
+  number: 1
+  noarch: python
+  script:
+    - export PYTHONPATH="${SRC_DIR}/boostrap_wheels:${PYTHONPATH}"
+    - cd certifi
+    - ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+  run:
+    - python >=${{ python_min }}
+
+tests:
+  - python:
+      imports:
+        - certifi
+      python_version: ${{ python_min }}.*
+
+about:
+  homepage: http://certifi.io/
+  license: ISC
+  license_file: certifi/LICENSE
+  summary: Python package for providing Mozilla's CA Bundle.
+  description: |
+    Certifi is a curated collection of Root Certificates for validating the
+    trustworthiness of SSL certificates while verifying the identity of TLS
+    hosts.
+  documentation: https://pypi.python.org/pypi/certifi
+  repository: https://github.com/certifi/python-certifi
+
+extra:
+  recipe-maintainers:
+    - jakirkham
+    - pelson
+    - sigmavirus24
+    - ocefpaf
