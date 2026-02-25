@@ -1,4 +1,4 @@
-{% set version = "2026.1.4" %}
+{% set version = "2026.2.25" %}
 
 {% set pip_version = "25.0.1" %}
 {% set setuptools_version = "75.8.0" %}
@@ -10,7 +10,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/c/certifi/certifi-{{ version }}.tar.gz
-    sha256: ac726dd470482006e014ad384921ed6438c457018f4b3d204aea4281258b2120
+    sha256: e887ab5cee78ea814d3472169153c2d12cd43b14bd03329a39a9c6e2e80bfba7
     folder: certifi
   # Download bootstrapped wheels into their respective source directories
   - url: https://pypi.org/packages/py3/p/pip/pip-{{ pip_version }}-py3-none-any.whl
