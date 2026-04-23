@@ -61,6 +61,8 @@ about:
 
 extra:
   recipe-maintainers:
+    - jjhelmus
+    - mingwandroid
     - jakirkham
     - pelson
     - sigmavirus24
