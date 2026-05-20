@@ -152,6 +152,8 @@ Feedstock Maintainers
 =====================
 
 * [@jakirkham](https://github.com/jakirkham/)
+* [@jjhelmus](https://github.com/jjhelmus/)
+* [@mingwandroid](https://github.com/mingwandroid/)
 * [@ocefpaf](https://github.com/ocefpaf/)
 * [@pelson](https://github.com/pelson/)
 * [@sigmavirus24](https://github.com/sigmavirus24/)
