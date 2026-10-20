@@ -1,4 +1,4 @@
-{% set version = "2026.10.18" %}
+{% set version = "2026.10.19" %}
 
 {% set pip_version = "26.2.1" %}
 {% set setuptools_version = "84.0.0" %}
@@ -10,7 +10,7 @@ package:
 
 source:
   - url: https://files.pythonhosted.org/packages/source/c/certifi/certifi-{{ version }}.tar.gz
-    sha256: b9995d97b64d0431a5af837d8ca8cd6238104d1f319f04bd93ea43124d6c861e
+    sha256: 035c1e85572b141bf1c3a3eff0e33a8eb74917522f2559075ff8d2fea780a1ae
     folder: certifi
   # Download bootstrapped wheels into their respective source directories
   - url: https://files.pythonhosted.org/packages/py3/p/pip/pip-{{ pip_version }}-py3-none-any.whl
@@ -24,7 +24,7 @@ source:
     folder: boostrap_wheels
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script_env:
     # Add bootstrapped wheels to `PYTHONPATH` so Python can find them for the build
