@@ -12,6 +12,9 @@ source:
   - url: https://files.pythonhosted.org/packages/source/c/certifi/certifi-{{ version }}.tar.gz
     sha256: 035c1e85572b141bf1c3a3eff0e33a8eb74917522f2559075ff8d2fea780a1ae
     folder: certifi
+    patches:
+      # use the CA bundle from conda-forge's ca-certificates instead of the vendored one
+      - use-conda-ca-certificates.patch
   # Download bootstrapped wheels into their respective source directories
   - url: https://files.pythonhosted.org/packages/py3/p/pip/pip-{{ pip_version }}-py3-none-any.whl
     sha256: 71138adf1f4ca900cdb7d289c21b7494329f2332b6d85f0e1c42108c0384ed3e
@@ -24,7 +27,7 @@ source:
     folder: boostrap_wheels
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script_env:
     # Add bootstrapped wheels to `PYTHONPATH` so Python can find them for the build
@@ -32,6 +35,8 @@ build:
       PYTHONPATH={{ os.sep.join([SRC_DIR|default("."), "boostrap_wheels"]) ~ os.pathsep ~ os.environ.get("PYTHONPATH", "") }}
   script:
     - cd certifi
+    # remove the vendored CA bundle; ca-certificates is used instead
+    - {{ PYTHON }} -c "import os; os.remove(os.path.join('certifi', 'cacert.pem'))"
     - {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -39,12 +44,16 @@ requirements:
     - python {{ python_min }}
   run:
     - python >={{ python_min }}
+    - ca-certificates >={{ version }}
 
 test:
   requires:
     - python {{ python_min }}
   imports:
     - certifi
+  commands:
+    - python -c "import os, certifi; assert os.path.isfile(certifi.where()), certifi.where()"
+    - python -c "import certifi; assert 'BEGIN CERTIFICATE' in certifi.contents()"
 
 about:
   home: http://certifi.io/
