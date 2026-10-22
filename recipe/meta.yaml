@@ -44,7 +44,7 @@ requirements:
     - python {{ python_min }}
   run:
     - python >={{ python_min }}
-    - ca-certificates
+    - ca-certificates >={{ version }}
 
 test:
   requires:
