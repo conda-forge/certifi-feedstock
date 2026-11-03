@@ -3,6 +3,7 @@
 {% set pip_version = "26.2.1" %}
 {% set setuptools_version = "84.0.0" %}
 {% set wheel_version = "0.48.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: certifi
@@ -27,7 +28,7 @@ source:
     folder: boostrap_wheels
 
 build:
-  number: 2
+  number: 3
   noarch: python
   script_env:
     # Add bootstrapped wheels to `PYTHONPATH` so Python can find them for the build
