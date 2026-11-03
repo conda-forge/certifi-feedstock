@@ -3,7 +3,7 @@
 {% set pip_version = "26.2.1" %}
 {% set setuptools_version = "84.0.0" %}
 {% set wheel_version = "0.48.0" %}
-{% set python_min = "3.10" %}
+{% set python_min = "3.9" %}
 
 package:
   name: certifi
@@ -28,7 +28,7 @@ source:
     folder: boostrap_wheels
 
 build:
-  number: 3
+  number: 4
   noarch: python
   script_env:
     # Add bootstrapped wheels to `PYTHONPATH` so Python can find them for the build
@@ -41,8 +41,9 @@ build:
     - {{ PYTHON }} -m pip install . -vv
 
 requirements:
+  # The pip that we use for bootstrapping no longer supports python 3.9
   host:
-    - python {{ python_min }}
+    - python 3.10
   run:
     - python >={{ python_min }}
     - ca-certificates >={{ version }}
